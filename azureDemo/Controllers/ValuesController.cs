@@ -24,6 +24,14 @@ namespace azureDemo.Controllers
             return "value";
         }
 
+
+        // GET api/values/test
+        [HttpGet("{name}")]
+        public ActionResult<string> GetName(string name)
+        {
+            return name;
+        }
+
         // POST api/values
         [HttpPost]
         public void Post([FromBody] string value)
